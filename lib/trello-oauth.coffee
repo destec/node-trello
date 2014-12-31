@@ -11,7 +11,7 @@ class TrelloOAuth
    # appName: the name you'd like shown on trello's "authorize this app" page
    constructor: (key, secret, loginCallback, appName) ->
       @oauth = new OAuth(requestUrl, accessUrl, key, secret, 
-         "1.0", loginCallback, "PLAINTEXT")
+         "1.0", loginCallback, "HMAC-SHA1")
       @appName = appName
 
    getRequestToken: (callback) ->
